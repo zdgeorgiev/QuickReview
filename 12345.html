@@ -14,6 +14,14 @@
         }
         gtag('js', new Date());
         gtag('config', 'G-QS1ZG1KT2J');
+
+        // Track custom event (e.g., when the page starts redirecting)
+        function trackRedirectionEvent() {
+            gtag('event', 'redirect', {
+                'event_category': 'Review Redirection',
+                'event_label': 'Google Maps Review Redirect 12345'
+            });
+        }
     </script>
 </head>
 <body>
@@ -39,6 +47,8 @@
             const reviewUrl = "https://www.google.com/maps/place/Happy+Bar+%26+Grill/@42.507832,27.4705468,15z/data=!4m6!3m5!1s0x40a694eb67f31d85:0x9d018f521b1641e9!8m2!3d42.50148!4d27.4797479!16s%2Fg%2F1tjjmw92?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D&utm_source=nfc_card&utm_medium=physical&utm_campaign=business1"; // Replace with dynamic URL
             setTimeout(function() {
                 window.location.href = reviewUrl; // Redirect after 3 seconds
+                // Track the redirection event
+                trackRedirectionEvent();
             }, 3000);
         </script>
     </div>
