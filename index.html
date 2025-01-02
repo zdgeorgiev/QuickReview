@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thank You for Your Feedback!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thank You!</h1>
+            <p>Your feedback is important to us.</p>
+        </header>
+
+        <section class="instructions">
+            <h2>You're about to leave a review</h2>
+            <p>Please wait as we redirect you to the Google Maps review page for your business...</p>
+        </section>
+
+        <div class="loading">
+            <p>Redirecting...</p>
+            <img src="loading-spinner.gif" alt="Loading...">
+        </div>
+
+        <!-- JavaScript to redirect to Google Maps review page after 3 seconds -->
+        <script>
+            // Adjust URL based on NFC card UID or dynamic logic
+            const reviewUrl = "https://www.google.com/maps/place/Happy+Bar+%26+Grill/@42.507832,27.4705468,15z/data=!4m6!3m5!1s0x40a694eb67f31d85:0x9d018f521b1641e9!8m2!3d42.50148!4d27.4797479!16s%2Fg%2F1tjjmw92?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"; // Replace with dynamic URL
+            setTimeout(function() {
+                window.location.href = reviewUrl; // Redirect after 3 seconds
+            }, 3000);
+        </script>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Business Name. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Include any other external JS or CSS if necessary -->
+</body>
+</html>
