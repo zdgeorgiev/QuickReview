@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thank You for Your Feedback!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS1ZG1KT2J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-QS1ZG1KT2J');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thank You!</h1>
+            <p>Your feedback is important to us.</p>
+        </header>
+
+        <section class="instructions">
+            <h2>You're about to leave a review</h2>
+            <p>Please wait as we redirect you to the Google Maps review page for your business...</p>
+        </section>
+
+        <div class="loading">
+            <p>Redirecting...</p>
+            <img src="loading-spinner.gif" alt="Loading...">
+        </div>
+
+        <!-- JavaScript to redirect to Google Maps review page after 3 seconds -->
+        <script>
+            // Adjust URL based on NFC card UID or dynamic logic
+            const reviewUrl = "https://www.google.com/maps/place/%D0%AF%D0%92-%D0%9A%D0%90+food+bar/@42.4990324,27.4712533,17z/data=!3m1!4b1!4m6!3m5!1s0x40a694956811d96f:0x8d2efa8d57b37989!8m2!3d42.4990285!4d27.4738282!16s%2Fg%2F11f04pkf8c?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"; // Replace with dynamic URL
+            setTimeout(function() {
+                window.location.href = reviewUrl; // Redirect after 3 seconds
+            }, 3000);
+        </script>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Business Name. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Include any other external JS or CSS if necessary -->
+</body>
+</html>
